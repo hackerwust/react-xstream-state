@@ -3,6 +3,7 @@ node_modules
 build
 esm
 lib
+cjs
 .local
 log
 server/config/.local.*.ts

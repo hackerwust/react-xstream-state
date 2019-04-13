@@ -8,9 +8,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:watch": "npm run clean && npm run build:esm -- --watch",
     "build": "run-s clean && run-p build:cjs build:esm",
-    "build:cjs": "tsc --outDir cjs --module commonjs --declaration",
+    "build:cjs": "tsc --outDir lib --module commonjs --declaration",
     "build:esm": "tsc --outDir esm --module esnext --declaration",
-    "clean": "rm -rf cjs esm build temp dist .cache",
+    "clean": "rm -rf lib esm build temp dist .cache",
     "prepublishOnly": "npm run build"
   },
   "files": [

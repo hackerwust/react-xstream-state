@@ -16,7 +16,6 @@ module.exports = {
         "eqeqeq": ["off"],
         "no-empty-function":"off",
         "no-useless-escape":"off",
-        "no-unused-vars": ["error", { "vars": "local" }],
         "@typescript-eslint/interface-name-prefix": "never",
         "@typescript-eslint/no-object-literal-type-assertion": false,
         "@typescript-eslint/no-explicit-any": false,
