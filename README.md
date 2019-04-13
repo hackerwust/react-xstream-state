@@ -93,10 +93,10 @@ class List extends React.Component {
 ```
 
 #### initialState
-model初始状态，subscribeStreamToProps订阅model时会自动使用initialState初始化状态
+>model初始状态，subscribeStreamToProps订阅model时会自动使用initialState初始化状态
 
 #### subscribe(stream$: Stream, hydrateState: Function): UnsubscribeHandle
-组件调用props.pullStream会执行subscribe中流的一系列操作，产生数据。通过hydrateState与初始状态融合分发到子组件
+>组件调用props.pullStream会执行subscribe中流的一系列操作，产生数据。通过hydrateState与初始状态融合分发到子组件
 
 #### subscribeStreamToProps(model, mapStateToProps)
-订阅Model的装饰器，消费Model产生的数据并以props传入组件。本质上就是一个HOC
+>订阅Model的装饰器，消费Model产生的数据并以props传入组件。本质上就是一个HOC
