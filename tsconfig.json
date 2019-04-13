@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "outDir": "./esm",
+    "declaration": true,
+    "sourceMap": false,
+    "emitBOM": false,
+    "importHelpers": true,
+    "moduleResolution": "Node",
+    "allowSyntheticDefaultImports": true,
+    "module": "commonjs",
+    "target": "es2017",
+    "lib": ["es2018", "dom"],
+    "jsx": "react",
+    "experimentalDecorators": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "allowJs": false,
+    "charset": "utf-8",
+    "removeComments": false,
+    "baseUrl": ".",
+  },
+  "include": [
+    "./src/**/*.d.ts",
+    "./src/**/*.tsx",
+    "./src/**/*.ts",
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

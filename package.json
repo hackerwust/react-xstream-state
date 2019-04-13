@@ -1,0 +1,71 @@
+{
+  "name": "react-xstream-state",
+  "version": "1.0.0",
+  "description": "基于[xstream](https://github.com/staltz/xstream)封装的react响应式状态管理解决方案",
+  "main": "lib/index.js",
+  "module": "esm/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:watch": "npm run clean && npm run build:esm -- --watch",
+    "build": "run-s clean && run-p build:cjs build:esm",
+    "build:cjs": "tsc --outDir cjs --module commonjs --declaration",
+    "build:esm": "tsc --outDir esm --module esnext --declaration",
+    "clean": "rm -rf cjs esm build temp dist .cache",
+    "prepublishOnly": "npm run build"
+  },
+  "files": [
+    "esm/",
+    "lib/"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "linters": {
+      "*.{ts,tsx}": [
+        "eslint --fix",
+        "git add"
+      ]
+    },
+    "ignore": [
+      "build",
+      "test",
+      "log"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hackerwust/react-xstream-state.git"
+  },
+  "keywords": [
+    "react-xstream-state",
+    "react-xstream",
+    "react-xstream-store",
+    "react store",
+    "react model"
+  ],
+  "author": "xiaochan(1427182960@qq.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hackerwust/react-xstream-state/issues"
+  },
+  "homepage": "https://github.com/hackerwust/react-xstream-state#readme",
+  "dependencies": {
+    "react": "^16.8.6",
+    "tslib": "^1.9.3",
+    "typescript": "^3.3.3",
+    "xstream": "^11.10.0"
+  },
+  "devDependencies": {
+    "@types/react": "^16.8.10",
+    "@typescript-eslint/eslint-plugin": "^1.6.0",
+    "@typescript-eslint/parser": "^1.6.0",
+    "eslint": "^5.16.0",
+    "eslint-config-ttdefault": "^1.0.7",
+    "husky": "^1.3.1",
+    "lint-staged": "^8.1.5",
+    "npm-run-all": "^4.1.5"
+  }
+}
