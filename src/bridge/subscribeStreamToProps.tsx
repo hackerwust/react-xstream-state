@@ -14,7 +14,7 @@ const subscirbeStreamToProps = (
         private hasBindListener = false;
         public state = {
             ...((model.constructor as IModelConstructor).initialState || {}),
-            pullStream: this.pullStream,
+            pullStream: model.pullStream,
             resetStream: model.resetStream
         };
 
@@ -37,16 +37,6 @@ const subscirbeStreamToProps = (
                 return;
             }
             this.setState(state);
-        }
-
-        @autoBind
-        public pullStream (payload: AnyObject = {}) {
-            if (this.hasBindListener) {
-                model.pullStream(payload);
-            } else {
-                // 如果没有绑定则异步等待一下
-                setTimeout(() => model.pullStream(payload));
-            }
         }
 
         // 绑定listener的操作需在render中进行
