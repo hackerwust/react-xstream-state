@@ -14,8 +14,8 @@ react-xstream-state结合xstream响应式编程的优势，为组件更好地管
 npm i react-xstream-state --save
 ```
 
-### 使用
-#### listMode.js
+### 例子
+#### listModel.js
 ```js
 import xs, { flattenSequentially } from 'xstream';
 import { ProducerBase } from 'react-xstream-state';
