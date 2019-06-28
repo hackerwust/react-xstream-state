@@ -8,7 +8,7 @@
     "moduleResolution": "Node",
     "allowSyntheticDefaultImports": true,
     "module": "commonjs",
-    "target": "es2017",
+    "target": "es5",
     "lib": ["es2018", "dom"],
     "jsx": "react",
     "experimentalDecorators": true,
