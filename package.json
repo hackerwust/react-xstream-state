@@ -1,6 +1,6 @@
 {
   "name": "react-xstream-state",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "基于[xstream](https://github.com/staltz/xstream)封装的react响应式状态管理解决方案",
   "main": "lib/index.js",
   "module": "esm/index.js",
@@ -17,6 +17,9 @@
     "esm/",
     "lib/"
   ],
+  "publishConfig": {
+    "registry": "http://registry.npmjs.org"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
