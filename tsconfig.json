@@ -1,13 +1,13 @@
 {
   "compilerOptions": {
-    "outDir": "./esm",
+    "outDir": "./dist",
     "declaration": true,
     "sourceMap": false,
     "emitBOM": false,
     "importHelpers": true,
     "moduleResolution": "Node",
     "allowSyntheticDefaultImports": true,
-    "module": "commonjs",
+    "module": "ESNext",
     "target": "es5",
     "lib": ["es2018", "dom"],
     "jsx": "react",
@@ -20,6 +20,7 @@
     "baseUrl": ".",
   },
   "include": [
+    "src",
     "./src/**/*.d.ts",
     "./src/**/*.tsx",
     "./src/**/*.ts",

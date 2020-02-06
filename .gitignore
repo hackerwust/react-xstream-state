@@ -5,5 +5,6 @@ esm
 lib
 cjs
 .local
+dist
 log
 server/config/.local.*.ts
