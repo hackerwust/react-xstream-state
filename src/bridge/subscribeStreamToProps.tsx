@@ -3,12 +3,12 @@ import autoBind from '../utils/autobind';
 import StreamModel, { IModelConstructor } from '../producer/Base';
 
 type IMapStreamToProps = (state: AnyObject) => AnyObject;
-type subscirbeStreamToPropsHoc = (component: React.ComponentClass) => React.ComponentClass;
+type subscribeStreamToPropsHoc = (component: React.ComponentClass) => React.ComponentClass;
 
-const subscirbeStreamToProps = (
+const subscribeStreamToProps = (
     model: StreamModel,
     mapStreamToProps: IMapStreamToProps
-): subscirbeStreamToPropsHoc => (PipeComponent: React.ComponentClass) => {
+): subscribeStreamToPropsHoc => (PipeComponent: React.ComponentClass) => {
 
     class ModelWrapperComponent extends React.PureComponent {
         private hasBindListener = false;
@@ -56,4 +56,4 @@ const subscirbeStreamToProps = (
     return ModelWrapperComponent;
 };
 
-export default subscirbeStreamToProps;
+export default subscribeStreamToProps;

@@ -4,7 +4,7 @@
   "description": "基于[xstream](https://github.com/staltz/xstream)封装的react响应式状态管理解决方案",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
-  "type": "dist/index.d.ts",
+  "types": "dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm run clean && rollup -c",
