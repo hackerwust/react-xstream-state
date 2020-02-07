@@ -1,6 +1,6 @@
 import React from 'react';
 import autoBind from '../utils/autobind';
-import StreamModel, { IModelConstructor } from '../producer/Base';
+import StreamModel, { IModelConstructor } from '../producer/base';
 
 type IMapStreamToProps = (state: AnyObject) => AnyObject;
 type subscribeStreamToPropsHoc = (component: React.ComponentClass) => React.ComponentClass;
